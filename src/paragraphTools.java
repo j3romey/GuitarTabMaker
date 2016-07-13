@@ -37,7 +37,7 @@ public class paragraphTools {
 			str = true;
 		}
 		
-		if ("123456".indexOf(s.charAt(1)) != -1){
+		if ("123456789x\\/hp".indexOf(s.charAt(1)) != -1){
 			fret = true;
 		}
 		if(str && fret){
@@ -50,26 +50,30 @@ public class paragraphTools {
 	
 	public boolean validate3(String s){
 		
-		boolean chord = false;
-		boolean string = false;
-		boolean string2 = false;
+		boolean str = false;
+		boolean fret = false;
+		boolean fret2 = false;
 		
 		if(s.length() != 3 ){
 			return false;
 		}
 		
 		if ("EADGBe".indexOf(s.charAt(0)) != -1){
-			chord = true;
+			str = true;
 		}
 		
 		if ("1234567890".indexOf(s.charAt(1)) != -1){
-			string = true;
+			fret = true;
 		}
 		
 		if ("1234567890".indexOf(s.charAt(2)) != -1){
-			string2 = true;
+			fret = true;
 		}
 		
-		return (true);
+		if(str && fret){
+			return (true);
+		}else{
+			return (false);
+		}
 	}
 }
