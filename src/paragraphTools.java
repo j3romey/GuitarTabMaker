@@ -15,7 +15,7 @@ public class paragraphTools {
 	}
 	
 	public String makeDash(){
-		int numDash = 61;
+		int numDash = 60;
 		//61
 		String dash = "";
 		for(int i =0; i < numDash; i++){
@@ -24,28 +24,16 @@ public class paragraphTools {
 		return (dash);
 	}
 	
-	public boolean validate2(String s){
-		
-		boolean str = false;
-		boolean fret = false;
-		
-		if(s.length() != 2 ){
+	public boolean validate(String s){
+		if(s.length() != 1 ){
 			return false;
 		}
 		
-		if ("EADGBe".indexOf(s.charAt(0)) != -1){
-			str = true;
-		}
-		
-		if ("123456789x\\/hp".indexOf(s.charAt(1)) != -1){
-			fret = true;
-		}
-		if(str && fret){
-			return (true);
+		if ("123456789x\\/hp".indexOf(s.charAt(0)) != -1){
+			return true;
 		}else{
-			return (false);
+			return false;
 		}
-		
 	}
 	
 	public boolean validate3(String s){
