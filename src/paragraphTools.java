@@ -24,6 +24,23 @@ public class paragraphTools {
 		return (dash);
 	}
 	
+	public void print(String[] chord_loc, String[] tabs_loc, int row,
+						String e_base, String B_base, String G_base,
+						String D_base, String A_base, String E_base){
+		System.out.println("Tab#: " + (row+1));
+		System.out.println(chord_loc[0] + e_base);
+		System.out.println(chord_loc[1] + B_base);
+		System.out.println(chord_loc[2] + G_base);
+		System.out.println(chord_loc[3] + D_base);
+		System.out.println(chord_loc[4] + A_base);
+		System.out.println(chord_loc[5] + E_base);
+	
+		for(int i = 0; i < tabs_loc.length; i++){
+			System.out.print(tabs_loc[i]);
+		}
+		System.out.println();
+	}
+	
 	public boolean validate(String s){
 		if(s.length() != 1 ){
 			return false;
@@ -35,6 +52,21 @@ public class paragraphTools {
 			return false;
 		}
 	}
+	
+	public boolean validate_in(String s){
+		
+		if(s.equals("")){
+			return true;
+		}
+		
+		if ("123456789x\\/hp".indexOf(s.charAt(0)) != -1){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+	
 	
 	public boolean validate3(String s){
 		
